@@ -1,0 +1,51 @@
+{
+  "name": "adamzerella",
+  "version": "0.0.1",
+  "description": "Source code for the personal website of Adam A. Zerella",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --mode development ",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamzerella/adamzerella.git"
+  },
+  "keywords": [
+    "Adam",
+    "Zerella",
+    "Personal",
+    "Website"
+  ],
+  "author": {
+    "name": "Adam A. Zerella",
+    "email": "adam.zerella@gmail.com",
+    "url": "https://adamzerella.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamzerella/adamzerella/issues"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  },
+  "homepage": "https://github.com/adamzerella/adamzerella#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.0-beta.0",
+    "jest": "^22.4.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  }
+}

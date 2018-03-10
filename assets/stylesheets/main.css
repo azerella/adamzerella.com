@@ -1,0 +1,100 @@
+html {
+    background-color: #061619;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#dashboard {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    width: 100%;
+    height: auto;
+    color: #3f5d63;
+    /* border: 5px solid green;    */
+}
+
+#footer {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 1.5em;
+    width: 100%;
+    height: auto;
+    color: #dede4d;
+    /* border: 5px solid green;    */
+}
+
+#signature {
+    transform: rotate(-30deg);
+    margin: 0;
+    position: absolute;
+    color:#dede4d;
+}
+
+#wrapper {
+    margin: 5em auto auto auto;
+    width: 50%;
+    display: flex;
+}
+
+#face {
+    border-color: #dede4d;
+    border-width: 0.15em;
+    border-style: solid;
+    border-image: url("../images/face.png") 30 round;
+    min-width: 50%;
+    min-height: 50%;
+    border-radius:50%;
+    margin: 4.5em 3em 3em 0;
+    /* border: 5px solid green;    */
+
+}
+
+.icon {
+    width: 128px;
+    height: 128px;
+    margin: 3em 0 3em 3em;
+    /* border: 5px solid green;    */
+}
+
+#gitIcon {
+    background-image: url("../images/github.svg");
+}
+
+.icon, #linkedinIcon {
+    background-image: url("../images/linkedin.svg");
+}
+
+.icon, #documentIcon {
+    background-image: url("../images/document.svg");
+}
+
+#documentIconWrapper {
+    color: #dede4d;
+    margin: 0 0 0 10em;
+    text-align: right;
+    border: 5px solid blue;   
+
+}
+
+.documentIconDownload {
+    /* border: 5px solid white;  */
+    width: 5em;  
+    height: auto;
+    margin: 0 0 0 10em;
+    text-align: right;
+    color: #dede4d;
+}
+
+.documentIconDownload img{
+    width: 32px;
+    height: 32px;
+    /* border: 5px solid red;    */
+    margin: -1.5em 0 0 6em;
+}

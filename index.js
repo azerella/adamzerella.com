@@ -14,7 +14,7 @@ const data = {
 class Footer extends React.Component {
     render(){
         return (
-            <div>ADAM ZERELLA &nbsp;&nbsp;&nbsp;&nbsp; {data.version}</div>
+            <footer>ADAM ZERELLA &nbsp;&nbsp;&nbsp;&nbsp; {data.version}</footer>
         );
     }
 }

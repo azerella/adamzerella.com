@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
     width: 50%;
     min-width: 260px;
-    min-height: : 440px;
+    min-height: 440px;
     text-align: center;
     display: flex;
     padding: 5em;
@@ -31,21 +31,7 @@ body {
     z-index: 1;
 }
 
-header {
-    text-align: center;
-    color: #3f5d63;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-header td {
-    padding-right: 3em;
-    margin: 0;
-    font-size: 12px;
-
-}
-
-footer {
+#footer {
     text-align: center;
     width: 100%;
     bottom: 1em;
@@ -53,6 +39,19 @@ footer {
     color: #dede4d;
     position: fixed;
     z-index: -1;
+    font-size: 12px;
+}
+
+#dashboard {
+    text-align: center;
+    color: #3f5d63;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#data, td {
+    padding-right: 3em;
+    margin: 0;
     font-size: 12px;
 }
 

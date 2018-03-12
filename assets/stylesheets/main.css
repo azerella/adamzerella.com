@@ -33,19 +33,16 @@ body {
 
 header {
     text-align: center;
-    position: fixed;
-    left: 0;
-    top: 1em;
-    width: 100%;
     color: #3f5d63;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 header td {
     padding-right: 3em;
     margin: 0;
     font-size: 12px;
+
 }
 
 footer {
@@ -104,7 +101,8 @@ footer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 3em;
+    padding: 1.5em;
+    margin-top: 1.5em;
 }
 
 .icon {

@@ -26,23 +26,23 @@
   "bugs": {
     "url": "https://github.com/adamzerella/adamzerella/issues"
   },
+  "homepage": "https://github.com/adamzerella/adamzerella#readme",
   "babel": {
     "presets": [
-      "@babel/env",
-      "@babel/react"
+      "env",
+      "react"
     ]
   },
-  "homepage": "https://github.com/adamzerella/adamzerella#readme",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "@babel/preset-react": "^7.0.0-beta.40",
     "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.0-beta.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "jest": "^22.4.2",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",

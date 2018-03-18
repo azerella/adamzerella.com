@@ -1,5 +1,12 @@
 "use-strict";
 
+require("./assets/main.css");
+require("./assets/images/download512.png");
+require("./assets/content/Adam A. Zerella - Resume.html");
+require("./assets/content/Adam A. Zerella - Resume.pdf");
+require("./assets/content/Adam A. Zerella - Resume.txt");
+
+
 import React from "react";
 import ReactDOM from "react-dom";
 

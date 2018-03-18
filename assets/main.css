@@ -44,7 +44,7 @@ body {
 
 #dashboard {
     text-align: center;
-    color: #3f5d63;
+    color: #b7cacc;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 #signature {
-    background-image: url("../images/signature512.png");
+    background-image: url("./images/signature128.png");
     background-size: cover;
     background-repeat: no-repeat;
     transform: rotate(-30deg);
@@ -64,12 +64,12 @@ body {
     right: 1.5em;
     bottom: 1.5em;
     color: #dede4d;
-    min-width: 96px;
-    min-height: 96px;
-    max-width: 96px;
-    max-height: 96px;
-    height: 96px;
-    width: 96px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    height: 32px;
+    width: 32px;
     z-index: -1;
 }
 
@@ -85,7 +85,7 @@ body {
     width: 256px;
     border-radius:50%;
     margin: 0 auto;
-    background-image: url("../images/face384.png");
+    background-image: url("./images/face384.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -113,15 +113,15 @@ body {
 }
 
 .icon, #gitIcon {
-    background-image: url("../images/github512.png");
+    background-image: url("./images/github512.png");
 }
 
 .icon, #linkedinIcon {
-    background-image: url("../images/linkedin512.png");
+    background-image: url("./images/linkedin512.png");
 }
 
 .icon, #documentIcon {
-    background-image: url("../images/document512.png");
+    background-image: url("./images/document512.png");
 }
 
 #documentIconWrapper {

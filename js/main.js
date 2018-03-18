@@ -1,13 +1,15 @@
 "use-strict";
 
+const pkgJson = require( '../package.json');
+
 /**
  * @author Adam A. Zerella
  * @description TODO 
  */
 export const DATA = {
     "environment"   : process.env.NODE_ENV,
-    "version"       : process.env.npm_package_version,
-    "visitors"      : 0,
-    "sessions"      : 0,
+    "version"       : pkgJson.version,
+    "dependencies"  : ( Object.keys(pkgJson.devDependencies).length ) + ( Object.keys(pkgJson.dependencies).length ),
+    "bundleSize"    : "0 KB",
     "coverage"      : "0%"
 }

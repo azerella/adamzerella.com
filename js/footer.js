@@ -15,7 +15,7 @@ export default class Footer extends React.Component {
 
     render(){
         return (
-            <div id="footer-text"> Adam Zerella &#8198; {DATA.version} </div>
+            <div id="footer-text"> Adam Zerella &#8198; &#8198; {DATA.version} </div>
         );
     }
 }

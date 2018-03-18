@@ -1,11 +1,13 @@
 {
   "name": "adamzerella",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Source code for the personal website of Adam A. Zerella",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --mode development ",
-    "test": "jest"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "test": "jest",
+    "build": "webpack --config webpack.prod.js",
+    "watch": "webpack --watch webpack.common.js webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -27,25 +29,30 @@
     "url": "https://github.com/adamzerella/adamzerella/issues"
   },
   "homepage": "https://github.com/adamzerella/adamzerella#readme",
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "ajv": "^6.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.3.0",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-minifier": "^3.5.11",
+    "html-webpack-plugin": "^3.0.6",
     "jest": "^22.4.2",
+    "react-countup": "^3.0.3",
+    "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
   }
 }

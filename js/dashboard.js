@@ -1,8 +1,9 @@
 "use-strict";
 
 import React, { Component } from "react";
-
 import { DATA } from "./main.js";
+
+import CountUp from 'react-countup';
 
 /**
  * @author Adam A. Zerella adam.zerella@gmail.com
@@ -19,11 +20,10 @@ export default class Dashboard extends React.Component {
                 <table>
                     <tbody>
                         <tr>
-                            <td>ENVIRONMENT: {DATA.environment}</td>
+                            <td>NODE ENV: {DATA.environment}</td>
                             <td>VERSION: {DATA.version}</td>
-                            <td>VISITORS: 0</td>
-                            <td>SESSIONS: 0</td>
-                            <td>COVERAGE: 0%</td>
+                            <td>DEPENDENCIES: <CountUp start={0} duration={2.75} end={DATA.dependencies} /> </td>
+                            <td>BUNDLE SIZE: {DATA.bundleSize} </td>
                         </tr>
                     </tbody>
                 </table>

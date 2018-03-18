@@ -5,5 +5,5 @@ import { DATA } from "../js/main.js";
  * @description TODO 
  */
 test( "package.json returns correct package version", () => {
-    expect( DATA.version ).toBe( "0.0.1" );
+    expect( DATA.version ).toBe( "0.1.1" );
 });

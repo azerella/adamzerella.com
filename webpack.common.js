@@ -8,7 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
   entry: './index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'htdocs')
+    path: path.resolve(__dirname, '../htdocs')
   },
   module: {
     rules: [
@@ -60,7 +60,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['htdocs']),
+    new CleanWebpackPlugin(['../htdocs']),
     new HtmlWebpackPlugin({
         template: "./index.html",
         favicon: "./assets/images/favicon.ico",

@@ -21,12 +21,17 @@ npm test
 ### Build
 Ensure "NODE_ENV" is set to production.
 ```shell
-$ export NODE_ENV="production"
+export NODE_ENV="production"
 ```
 
 ```js
-npm run-script build
+npm run build
 ```
+
+Minified code is then located under `../htdocs` from the project root.
+
+### Deployment
+This project is deployed to a [Bitnami Apache](https://docs.bitnami.com/virtual-machine/components/apache/) container hosted on [AWS Lightsail](https://aws.amazon.com/lightsail/)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/adamzerella/adamzerella/blob/master/LICENSE.md) file for details.

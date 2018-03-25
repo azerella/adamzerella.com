@@ -4,7 +4,7 @@
   "description": "Source code for the personal website of Adam A. Zerella",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
     "test": "ava",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch webpack.common.js webpack.dev.js"
@@ -30,36 +30,27 @@
   },
   "homepage": "https://github.com/adamzerella/adamzerella#readme",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
-  "devDependencies": {
-    "ajv": "^6.2.1",
-    "ava": "^0.25.0",
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.3.0",
     "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
-    "html-minifier": "^3.5.11",
-    "html-webpack-plugin": "^3.0.6",
+    "html-minifier": "^3.5.12",
+    "html-webpack-plugin": "^3.1.0",
+    "react": "^16.2.0",
     "react-countup": "^3.0.3",
+    "react-dom": "^16.2.0",
     "style-loader": "^0.20.3",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "^3.1.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
     "webpack-merge": "^4.1.2"
   },
-  "babel": {
-    "presets": [
-      "env",
-      "react",
-      "stage-3"
-    ]
+  "devDependencies": {
+    "ajv": "^6.2.1",
+    "ava": "^0.25.0",
+    "webpack-dev-server": "^3.1.1"
   }
 }

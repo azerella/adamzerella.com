@@ -22,8 +22,6 @@ body {
     font-family: system;
     margin: 0 auto;
     width: 50%;
-    min-width: 260px;
-    min-height: 440px;
     text-align: center;
     display: flex;
     padding: 5em;
@@ -46,7 +44,7 @@ body {
     text-align: center;
     color: #b7cacc;
     margin: 0 auto;
-    overflow: hidden;
+    width: auto;
 }
 
 #data, td {
@@ -75,34 +73,61 @@ body {
 }
 
 #face {
+    margin: 0 auto;
+    z-index: 1;
+    width: 256px;
+    height: 256px;
+    min-width: 256px;
+    min-height: 256px;
+    max-width: 256px;
+    max-height: 256px;
+    border-radius:50%;
+    background-image: url("./images/face256.png");
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
     border-color: #dede4d;
     border-width: 0.15em;
     border-style: solid;
-    max-width: 256px;
-    max-height: 256px;
-    min-width: 256px;
-    min-height: 256px;
-    height: 256px;
-    width: 256px;
-    border-radius:50%;
-    margin: 0 auto;
-    background-image: url("./images/face384.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+/* max-width 414px aligns to a iPhone6+*/
+@media only screen and (max-width: 414px) {
+    #face {
+        width: 128px;
+        height: 128px;
+        min-width: 128px;
+        min-height: 128px;
+        max-width: 128px;
+        max-height: 128px;
+        background-image: url("./images/face128.png");
+        background-size: 128px 128px;
+    }
+    #iconWrapper {
+        height: 128px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #dashboard {
+        overflow: scroll;
+    }
 }
 
 #iconWrapper {
     margin: 0 auto;
-        z-index: 1;
-
+    z-index: 1;
+    width: 64px;
+    height: 256px;
 }
 
 #contentWrapper {
-    width: 100%;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    margin-top: 1.5em;
     display: flex;
     flex-wrap: wrap;
-    padding: 1.5em;
-    margin-top: 1.5em;
+    padding: 1em;
 }
 
 .icon {

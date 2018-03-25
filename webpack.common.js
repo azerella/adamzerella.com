@@ -1,5 +1,4 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLMinifier = require("html-minifier").minify;
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -60,11 +59,16 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['../htdocs']),
     new HtmlWebpackPlugin({
         template: "./index.html",
         favicon: "./assets/images/favicon.ico",
-        minify: HTMLMinifier,
+        minify: {
+          removeAttributeQuotes: true,
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyJS: true,
+          minifyCSS: true
+        },
         xhtml: true,
         hash: true
     }),

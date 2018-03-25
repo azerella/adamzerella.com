@@ -22,7 +22,7 @@ export default class Dashboard extends React.Component {
                         <tr>
                             <td>NODE ENV: {DATA.environment}</td>
                             <td>VERSION: {DATA.version}</td>
-                            <td>DEPENDENCIES: <CountUp start={0} duration={2.75} end={DATA.dependencies} /> </td>
+                            <td>NPM DEPENDENCIES: <CountUp start={0} duration={3} end={DATA.dependencies} /> </td>
                             <td>BUNDLE SIZE: {DATA.bundleSize} </td>
                         </tr>
                     </tbody>

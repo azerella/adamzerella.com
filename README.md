@@ -10,7 +10,7 @@ npm install
 
 ### Develop
 ```js
-npm start
+npm run dev
 ```
 
 ### Test

@@ -61,7 +61,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
   plugins: [
     new HtmlWebpackPlugin({
         template: "./index.html",
-        favicon: "./assets/images/favicon.ico",
         minify: {
           removeAttributeQuotes: true,
           removeComments: true,

@@ -3,14 +3,14 @@
   font-family: system;
   font-style: normal;
   font-weight: 300;
-  src: 
-        local(".SFNSText"), 
+  src:
+        local(".SFNSText"),
         local(".HelveticaNeueDeskInterface"),
-        local(".LucidaGrandeUI"), 
-        local("Ubuntu"), 
-        local("Segoe UI"), 
-        local("Roboto"), 
-        local("DroidSans"), 
+        local(".LucidaGrandeUI"),
+        local("Ubuntu"),
+        local("Segoe UI"),
+        local("Roboto"),
+        local("DroidSans"),
         local("Tahoma");
 }
 
@@ -82,7 +82,7 @@ body {
     max-width: 256px;
     max-height: 256px;
     border-radius:50%;
-    background-image: url("./images/face256.png");
+    background-image: url("./images/face256_2.png");
     background-size: 256px 256px;
     background-repeat: no-repeat;
     border-color: #dede4d;
@@ -99,7 +99,7 @@ body {
         min-height: 128px;
         max-width: 128px;
         max-height: 128px;
-        background-image: url("./images/face128.png");
+        background-image: url("./images/face128_2.png");
         background-size: 128px 128px;
     }
     #iconWrapper {

@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /
-User-agent: Googlebot-Image
-Disallow: /assets
-User-agent: Googlebot
-Allow: /index.html
-User-agent: Twitterbot
-Allow: /index.html

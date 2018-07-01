@@ -1,6 +1,8 @@
 ## 0.2.0
 
 -   Migrated to create-react-app
+-   Updated README
+-   Bumping up to `v0.2.0`
 
 ## 0.1.1
 

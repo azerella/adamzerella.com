@@ -1,37 +1,39 @@
 # adamzerella
-[![Build Status](https://travis-ci.org/adamzerella/adamzerella.svg?branch=master)](https://travis-ci.org/adamzerella/adamzerella)
 
-> My personal website
+> Source code for the website of [https://adamzerella.com](adamzerella.com])
 
 ### Install
-```js
+
+```node
 npm install
 ```
 
 ### Develop
-```js
+
+```node
 npm run dev
 ```
 
 ### Test
-```js
+
+```node
 npm test
 ```
 
 ### Build
-Ensure "NODE_ENV" is set to production.
-```shell
-export NODE_ENV="production"
-```
-then
-```js
-npm run build
-```
 
-Minified code is then located under `../htdocs` from the project root.
+Generate the static bundle
+
+```node
+npm build
+```
 
 ### Deployment
-This project is deployed to a [Bitnami Apache](https://docs.bitnami.com/virtual-machine/components/apache/) container hosted on [AWS Lightsail](https://aws.amazon.com/lightsail/)
+
+```
+
+```
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE.md](https://raw.githubusercontent.com/adamzerella/adamzerella/master/LICENSE) file for details.

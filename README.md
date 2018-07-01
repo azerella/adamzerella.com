@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/adamzerella/adamzerella.svg)](https://github.com/adamzerella/adamzerella/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/adamzerella/adamzerella.svg)](https://github.com/adamzerella/adamzerella/issues)
 
-> Source code for the static website of [https://adamzerella.com](adamzerella.com])
+> Source code for the static website of [adamzerella.com](https://adamzerella.com)
 
 ### Install
 

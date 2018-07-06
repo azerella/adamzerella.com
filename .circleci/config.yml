@@ -32,9 +32,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project # /home/root/project
-      # - add_ssh_keys:
-          # fingerprints:
-            # - $LS_FINGERPRINT
       - run:
           name: Copying files to AWS Bitnami Apache
           command: scp -o StrictHostKeyChecking=no -r ./build/* $LS_USERNAME@$LS_SERVER:$LS_PATH

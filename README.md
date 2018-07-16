@@ -7,43 +7,39 @@
 
 > Source code for the static website of [adamzerella.com](https://adamzerella.com)
 
-### Install
+# Prerequisites
+
+This project requires for you to have [NodeJS LTS](https://nodejs.org/en/) installed, which at the time of writing is `v8.11.3`. Additionally, this project preferences [Yarn](https://yarnpkg.com/lang/en/) over NPM.
+
+# Installation
 
 ```node
-# NPM
-npm install
-
 # Yarn
 yarn install
 ```
 
-### Develop
+# Develop
 
 Will launch a local development server with hot reloading:
 
 ```node
-# NPM
-npm dev
-
 # Yarn
 yarn dev
 ```
 
-### Build
+# Build
 
-Generate the static bundle under `./build`
+Generate the static bundle under `build/`
 
 ```node
-# NPM
-npm build
-
 # Yarn
 yarn build
 ```
 
-### Deployment
+# Deployment
+
 This project is automatically deployed to a [Bitnami Apache](https://docs.bitnami.com/virtual-machine/components/apache/) container hosted on [AWS Lightsail](https://aws.amazon.com/lightsail/). The automatic deployment (CI) is done with `CircleCi` watching the master branch.
 
-## License
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/adamzerella/adamzerella/master/LICENSE) file for details.

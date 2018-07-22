@@ -3,12 +3,13 @@
 -   Migrated to create-react-app
 -   Updated README
 -   Bumping up to `v0.2.0`
+-   Temporarily removed the `Header` component until complete.
 
 ## 0.1.1
 
 -   Modified left/right padding for `<td>` items in dashboard
 -   Added CHANGES.md
--   Modified `Bundle Size: ` in dashboard based on bitnami web-server compression output
+-   Modified `Bundle Size:` in dashboard based on bitnami web-server compression output
 -   Added .gitattributes file
 -   Added @media queries for resizing face iamge on mobile
 -   Minor CSS alignment tweaks to content wrapper

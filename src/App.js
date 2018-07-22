@@ -10,7 +10,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="app">
-				<Header meta={Metadata} />
+				{/* <Header meta={Metadata} /> */}
 				<Content />
 				<Footer meta={Metadata} />
 			</div>

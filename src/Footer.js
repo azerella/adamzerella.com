@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import SignatureIcon from "./assets/images/signature.svg";
+
 import "./Footer.css";
 
 /**
@@ -9,16 +10,16 @@ import "./Footer.css";
  * @returns {div} - Footer component as "footer"
  */
 export default class Footer extends Component {
-	constructor(props) {
-		super();
-	}
-
 	render() {
 		return (
-			<div className="footer">
+			<footer>
 				Adam Zerella &nbsp; v{this.props.meta.version} &nbsp;&nbsp;
-				<img alt="adam signature" src={SignatureIcon} />
-			</div>
+				<img
+					className="rounded"
+					alt="adam signature"
+					src={SignatureIcon}
+				/>
+			</footer>
 		);
 	}
 }

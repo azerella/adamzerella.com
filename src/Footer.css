@@ -1,13 +1,10 @@
-.footer {
+footer {
 	margin: 0 auto;
-	flex: 1;
-	color: #f1f1f1;
 	text-align: center;
-	font-size: 12px;
 }
 
-.footer > img {
+footer > img {
 	transform: rotate(-20deg);
-	height: 32px;
-	width: 32px;
+	height: 2rem;
+	width: 2rem;
 }

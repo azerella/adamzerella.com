@@ -1,5 +1,19 @@
-.app {
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
+html,
+body {
+	background-color: #212121;
+	color: #f1f1f1;
+	margin-top: 1rem;
+}
+
+a {
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+/**
+Quick hack to vertically align column content .avatar
+**/
+.col-avatar {
+	margin-top: auto;
+	margin-bottom: auto;
 }

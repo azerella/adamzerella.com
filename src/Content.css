@@ -1,54 +1,7 @@
-.content {
-	margin: 0 auto;
-	margin-top: 1.5em;
-	padding: 1em;
-	display: block;
+.content > .row > .col-sm-4 > a > img {
+	width: 75%;
 }
 
-.content-row {
-	display: inline-flex;
-}
-
-.icon-wrapper {
-	display: grid;
-	margin-left: 2em;
-}
-
-.icon {
-	width: 64px;
-	height: 64px;
-	margin: 1em auto;
-}
-
-.link-document > img {
-	margin: 0;
-	padding: 0;
-}
-
-.link-document > a > .icon {
-	width: 32px;
-	height: 32px;
-}
-
-.link-document-wrapper {
-	display: inline-block;
-}
-
-.link-document-wrapper > a > .icon {
-	width: 16px;
-	height: 16px;
-	margin: 0;
-	margin-left: 1em;
-}
-
-.link-document-wrapper > a {
-	color: #d9d9d9;
-	text-align: center;
-	font-size: 12px;
-	vertical-align: super;
-	text-decoration: none;
-}
-
-.link-document-wrapper > a > img {
-	float: right;
+.content > .row > .col-sm-4 {
+	margin-bottom: 1rem;
 }

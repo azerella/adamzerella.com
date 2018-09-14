@@ -1,3 +1,15 @@
+## 0.3.1
+
+-   Changed author name from `Adam A. ...` to `Adam ...`
+
+## 0.3.0
+
+-   Implemented bootstrap v4 grid system
+-   Refactoring of CSS layout to use grid system.
+-   Removed unused asset items (download)
+-   Updated icons to git Github, Linkedin & Mail
+-   Changed asset format from `.png` -> `.svg`
+
 ## 0.2.0
 
 -   Migrated to create-react-app

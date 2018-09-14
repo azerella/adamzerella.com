@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./Header.css";
+// import "./Header.css";
 
 /**
  * @description Top section of the page housing details like technical details

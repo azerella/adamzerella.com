@@ -1,5 +1,16 @@
+@font-face {
+	font-family: system;
+	font-style: normal;
+	font-weight: 300;
+	font-stretch: normal;
+	src: local(".SFNSText"), local(".HelveticaNeueDeskInterface"),
+		local(".LucidaGrandeUI"), local("Ubuntu"), local("Segoe UI"),
+		local("Roboto"), local("DroidSans"), local("Tahoma");
+}
+
 html,
 body {
+	font-family: system;
 	background-color: #212121;
 	color: #f1f1f1;
 	margin-top: 1rem;

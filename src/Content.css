@@ -4,6 +4,10 @@
 
 .content > .row > .col-sm-4 > a:hover > img {
 	filter: hue-rotate(180deg);
+	-moz-filter: hue-rotate(180deg);
+	-o-filter: hue-rotate(180deg);
+	-webkit-filter: hue-rotate(180deg);
+	-ms-filter: hue-rotate(180deg);
 }
 
 .content > .row > .col-sm-4 {

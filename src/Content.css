@@ -2,6 +2,10 @@
 	width: 75%;
 }
 
+.content > .row > .col-sm-4 > a:hover > img {
+	filter: hue-rotate(180deg);
+}
+
 .content > .row > .col-sm-4 {
 	margin-bottom: 1rem;
 }

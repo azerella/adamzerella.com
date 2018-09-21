@@ -1,3 +1,11 @@
+## 0.4.1
+
+-   Installed `react-particle-animation`
+-   Implemented particle animiation as background
+-   Added description to front page
+-   Minor CSS refactoring
+-   Updated meta descriptions
+
 ## 0.3.1
 
 -   Changed author name from `Adam A. ...` to `Adam ...`

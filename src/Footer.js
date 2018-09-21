@@ -13,6 +13,7 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<footer>
+				Full-stack web engineer located in Canberra, Australia.<br />
 				Adam Zerella &nbsp; v{this.props.meta.version} &nbsp;&nbsp;
 				<img
 					className="rounded"

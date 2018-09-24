@@ -1,6 +1,6 @@
 {
 	"name": "adamzerella",
-	"version": "0.4.1",
+	"version": "0.4.2",
 	"private": true,
 	"engines": {
 		"node": ">=8.0.0",
@@ -39,7 +39,7 @@
 		"website",
 		"personal"
 	],
-	"author": "Adam Zerella <adamzerella@users.noreply.github.com>",
+	"author": "Adam Zerella <adam.zerella@gmail.com>",
 	"eslintIgnore": [
 		"public/**"
 	]

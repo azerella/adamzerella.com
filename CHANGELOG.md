@@ -1,3 +1,7 @@
+## 0.4.2
+
+-   Changed email address to @gmail.com
+
 ## 0.4.1
 
 -   Installed `react-particle-animation`

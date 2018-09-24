@@ -53,7 +53,7 @@ export default class Content extends Component {
 					<div className="col-sm-4 offset-4">
 						<a
 							className="link-email"
-							href="mailto:adamzerella@users.noreply.github.com"
+							href="mailto:adam.zerella@gmail.com"
 							target="_top"
 							title="Email adam zerella"
 						>

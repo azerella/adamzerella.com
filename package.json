@@ -1,6 +1,6 @@
 {
 	"name": "adamzerella",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"private": true,
 	"engines": {
 		"node": "~8",
@@ -8,8 +8,8 @@
 		"yarn": "~1"
 	},
 	"dependencies": {
-		"react": "^16.5.2",
-		"react-dom": "^16.5.2",
+		"react": "^16.6.0",
+		"react-dom": "^16.6.0",
 		"react-scripts": "2.0.5",
 		"react-particle-animation": "^1.0.1"
 	},

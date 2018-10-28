@@ -2,39 +2,46 @@ version: 2
 jobs:
   build-site:
     docker:
-      - image: circleci/node:8.11.3 # NodeLTS as of 06/2018
+      # NodeLTS as of 10/2018
+      - image: circleci/node:8.12.0
     environment:
-      NODE_ENV: "production" # Won't install anything from devDependencies.
+      # Won't install anything from devDependencies.
+      NODE_ENV: "production"
+    working_directory: ~/adamzerella
     steps:
       - checkout
       - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      - run: 
-          name: Install dependencies
-          command: yarn install
+            name: Restore node_modules from cache
+            keys:
+                - yarn-packages-{{ checksum "package.json" }}
+      - run:
+            name: Install Nodejs modules
+            command: yarn install
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/project/node_modules/
-      - run: 
-          name: Build adamzerella.com
-          command: yarn build
+            name: Save node_modules to cache
+            key: yarn-packages-{{ checksum "package.json" }}
+            paths:
+                - node_modules/
+      - run:
+            name: Build adamzerella.com
+            command: yarn build
       - persist_to_workspace:
-          root: ~/project # /home/circleci/project
-          paths:
-            - ./build
+            root: ~/adamzerella
+            paths:
+                - build/
   deploy-site:
     docker:
       - image: circleci/ubuntu-server:latest
     steps:
       - attach_workspace:
-          at: ~/project # /home/root/project
+          at: ~/adamzerella
       - run:
           name: Copying files to AWS Bitnami Apache
-          command: scp -o StrictHostKeyChecking=no -r ./build/* $LS_USERNAME@$LS_SERVER:$LS_PATH
+          command: |
+              cd ~/adamzerella
+              scp -o StrictHostKeyChecking=no -r ./build/* $LS_USERNAME@$LS_SERVER:$LS_PATH
+
+
 workflows:
   version: 2
   build-and-deploy:
@@ -43,7 +50,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                  - master
       - deploy-site:
           requires:
             - build-site

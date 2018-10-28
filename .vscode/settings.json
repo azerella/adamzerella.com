@@ -1,6 +1,5 @@
 {
 	"editor.renderWhitespace": "all",
-	"editor.formatOnSave": true,
 	"editor.rulers": [80],
 	"editor.tabSize": 4,
 	"eslint.packageManager": "yarn"

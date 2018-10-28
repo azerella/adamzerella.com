@@ -3,8 +3,9 @@
 	"version": "0.4.2",
 	"private": true,
 	"engines": {
-		"node": ">=8.0.0",
-		"npm": ">=5.0.0"
+		"node": "~8",
+		"npm": "~6",
+		"yarn": "~1"
 	},
 	"dependencies": {
 		"react": "^16.5.2",

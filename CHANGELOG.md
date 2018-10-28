@@ -1,3 +1,7 @@
+## 0.4.3
+
+-   Styled `<noscript>` page.
+
 ## 0.4.2
 
 -   Changed email address to @gmail.com

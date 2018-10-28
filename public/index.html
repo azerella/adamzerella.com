@@ -65,7 +65,36 @@
 </head>
 
 <body>
-  <noscript style="color:#000000;"> Javascript is required to render this page. :(</noscript>
+  <noscript> 
+    <style>
+      @font-face {
+        font-family: system;
+        src: local(".SFNSText"), local(".HelveticaNeueDeskInterface"),
+          local(".LucidaGrandeUI"), local("Ubuntu"), local("Segoe UI"),
+          local("Roboto"), local("DroidSans"), local("Tahoma");
+      }
+      body {
+        background-color: #212121;
+        color: #DEDE4D;
+        text-align: center;
+        font-family: system;
+      }
+      a {
+        color: #DEDE4D;
+        text-decoration: underline;
+      }
+    </style>    
+    <h1>You'll need Javascript to render this site </h1>
+    <h4>If you're not sure how to, check out 
+      <a 
+        title="Go to enable-javascript.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        href="https://www.enable-javascript.com/">
+        enable-javascript.com</a>
+      for some guidance!
+    </h4>
+  </noscript>
   <div id="root"></div>
 </body>
 

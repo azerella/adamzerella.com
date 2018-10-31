@@ -1,5 +1,6 @@
 ## 0.4.3
 
+-   Trialling polyfill `ellipse` for IE
 -   Styled `<noscript>` page.
 
 ## 0.4.2

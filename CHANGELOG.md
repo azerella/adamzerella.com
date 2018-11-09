@@ -1,3 +1,8 @@
+## 0.4.5
+
+-   Updated CRA to latest.
+-   Installed and imported `react-app-polyfill`
+
 ## 0.4.3
 
 -   Trialling polyfill `ellipse` for IE

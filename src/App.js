@@ -5,12 +5,8 @@ import Metadata from "./Metadata";
 import Avatar from "./Avatar";
 import ParticleAnimation from "react-particle-animation";
 
-import { loadPolyfills } from "./helpers/polyfills";
-
 import "./App.css";
 import "./static/css/bootstrap-grid.min.css";
-
-loadPolyfills();
 
 class App extends Component {
 	render() {

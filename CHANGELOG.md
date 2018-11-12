@@ -1,3 +1,7 @@
+## 0.4.6
+
+-   Extend PWA manifest to include `512` and `192` favicon sizes.
+
 ## 0.4.5
 
 -   Updated CRA to latest.

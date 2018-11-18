@@ -3,7 +3,7 @@ jobs:
   build-site:
     docker:
       # NodeLTS as of 10/2018
-      - image: circleci/node:8.12.0
+      - image: circleci/node:10.13.0
     environment:
       # Won't install anything from devDependencies.
       NODE_ENV: "production"
@@ -13,18 +13,18 @@ jobs:
       - restore_cache:
             name: Restore node_modules from cache
             keys:
-                - yarn-packages-{{ checksum "package.json" }}
+                - npm-packages-{{ checksum "package.json" }}
       - run:
-            name: Install Nodejs modules
-            command: yarn install
+            name: Install Node.js modules
+            command: npm i
       - save_cache:
             name: Save node_modules to cache
-            key: yarn-packages-{{ checksum "package.json" }}
+            key: npm-packages-{{ checksum "package.json" }}
             paths:
                 - node_modules/
       - run:
             name: Build adamzerella.com
-            command: yarn build
+            command: npm run build
       - persist_to_workspace:
             root: ~/adamzerella
             paths:

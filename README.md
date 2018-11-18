@@ -9,13 +9,12 @@
 
 # Prerequisites
 
-This project requires for you to have [NodeJS LTS](https://nodejs.org/en/) installed, which at the time of writing is `v8.11.3`. Additionally, this project preferences [Yarn](https://yarnpkg.com/lang/en/) over NPM.
+This project requires for you to have [Node.js LTS](https://nodejs.org/en/) installed, which at the time of writing is `v10.13.0`.
 
 # Installation
 
 ```node
-# Yarn
-yarn install
+npm i
 ```
 
 # Develop
@@ -23,8 +22,7 @@ yarn install
 Will launch a local development server with hot reloading:
 
 ```node
-# Yarn
-yarn dev
+npm run dev
 ```
 
 # Build
@@ -32,8 +30,7 @@ yarn dev
 Generate the static bundle under `build/`
 
 ```node
-# Yarn
-yarn build
+npm run build
 ```
 
 # Deployment

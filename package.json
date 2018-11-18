@@ -3,9 +3,8 @@
 	"version": "0.4.5",
 	"private": true,
 	"engines": {
-		"node": "~8",
-		"npm": "~6",
-		"yarn": "~1"
+		"node": "~10",
+		"npm": "~6"
 	},
 	"dependencies": {
 		"react": "^16.6.1",
@@ -15,7 +14,7 @@
 		"react-scripts": "2.1.1"
 	},
 	"scripts": {
-		"dev": "yarn run start",
+		"dev": "npm run start",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",

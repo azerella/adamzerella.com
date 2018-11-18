@@ -39,7 +39,7 @@ jobs:
           name: Copying files to AWS Bitnami Apache
           command: |
               cd ~/adamzerella
-              scp -r ./build/* $LS_USERNAME@$LS_SERVER:$LS_PATH
+              scp -o StrictHostKeyChecking=no -r ./build/* $LS_USERNAME@$LS_SERVER:$LS_PATH
 
 
 workflows:

@@ -1,5 +1,8 @@
 ## 0.4.6
 
+-   Added more correct image sizes to manifest
+-   Added `.deploy/*` configs for NGINX deployment
+-   Added `robots.txt` to project files
 -   Added `.editorconfig`
 -   Added NGINX deployment configurations to project
 -   Extend PWA manifest to include `512` and `192` favicon sizes.

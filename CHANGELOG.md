@@ -1,5 +1,7 @@
 ## 0.4.6
 
+-   Added `.editorconfig`
+-   Added NGINX deployment configurations to project
 -   Extend PWA manifest to include `512` and `192` favicon sizes.
 -   Capitalised link titles
 -   Upgraded favicon asset `face.svg`

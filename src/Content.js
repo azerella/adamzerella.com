@@ -22,7 +22,7 @@ export default class Content extends Component {
 							href="https://github.com/adamzerella"
 							target="_blank"
 							rel="noopener noreferrer"
-							title="Go to github.com/adam-zerella"
+							title="Go to Adam Zerella's Github"
 						>
 							<img
 								className="img-thumbnail"
@@ -39,7 +39,7 @@ export default class Content extends Component {
 							href="https://www.linkedin.com/in/adam-zerella-8803ab128/"
 							target="_blank"
 							rel="noopener noreferrer"
-							title="Go to linkedin.com/adam-zerella"
+							title="Go to Adam Zerella's linkedin"
 						>
 							<img
 								className="img-thumbnail"
@@ -55,7 +55,7 @@ export default class Content extends Component {
 							className="link-email"
 							href="mailto:adam.zerella@gmail.com"
 							target="_top"
-							title="Email adam zerella"
+							title="Email Adam Zerella"
 						>
 							<img
 								className="img-thumbnail"

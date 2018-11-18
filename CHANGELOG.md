@@ -1,6 +1,8 @@
 ## 0.4.6
 
 -   Extend PWA manifest to include `512` and `192` favicon sizes.
+-   Capitalised link titles
+-   Upgraded favicon asset `face.svg`
 
 ## 0.4.5
 

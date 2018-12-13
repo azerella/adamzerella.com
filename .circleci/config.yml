@@ -35,14 +35,11 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/adamzerella
-      - add_ssh_keys:
-          fingerprints:
-           - "96:a9:08:d1:38:67:33:57:30:a7:1a:38:73:a2:8e:b1"
       - run:
-          name: Copying files to AWS Bitnami Apache
+          name: No need to do anything.
           command: |
               cd ~/adamzerella
-              scp -o StrictHostKeyChecking=no -r ./build/* $LS_USERNAME@$LS_SERVER:$LS_PATH
+              echo "Thankyou Netlify..."
 
 
 workflows:

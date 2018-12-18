@@ -8,9 +8,9 @@
 			"type": "image/x-icon"
 		},
 		{
-		"src": "static/media/face.bbf64f0e.svg",
-		"sizes": "512x512 256x256 192x192",
-		"type": "image/svg+xml"
+			"src": "static/media/face-rounded.png",
+			"sizes": "512x512 256x256 192x192",
+			"type": "image/png"
 		}
 	],
 	"start_url": ".",

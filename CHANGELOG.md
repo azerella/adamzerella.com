@@ -1,3 +1,9 @@
+## 0.4.7
+
+-   Deprecated `.circleci` in favour of Netlify deployments
+-   Removed HTML `twitter:` meta tags
+-   Updated site desc
+
 ## 0.4.6
 
 -   Added more correct image sizes to manifest

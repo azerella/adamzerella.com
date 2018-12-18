@@ -1,3 +1,6 @@
+# #################################################################################
+# THIS CONFIGURATION HAS BEEN DEPRECATED IN FAVOUR OF AUTOMATIC NETLIFY DEPLOYMENTS
+# #################################################################################
 version: 2
 jobs:
   build-site:

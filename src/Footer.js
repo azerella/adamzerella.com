@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import SignatureIcon from "./assets/images/signature.svg";
-
 import "./Footer.css";
 
 /**
@@ -13,7 +11,8 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<footer>
-				Full-stack web engineer located in Canberra, Australia.<br />
+				Full-stack web engineer located in Canberra, Australia.
+			    <br /> <br />
 				Adam Zerella &nbsp; v{this.props.meta.version} &nbsp;&nbsp;
 			</footer>
 		);

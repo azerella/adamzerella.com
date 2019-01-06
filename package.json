@@ -10,7 +10,7 @@
 		"react": "^16.6.3",
 		"react-dom": "^16.6.3",
 		"react-particle-animation": "^1.0.1",
-		"react-scripts": "2.1.1"
+		"react-scripts": "^2.1.3"
 	},
 	"scripts": {
 		"dev": "npm run start",

@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import "./Footer.css";
 
 /**
- * @description Bottom section of the page housing details like a signature and
- * website author name.
+ * @description Bottom section of the page housing details like a website 
+ * author name.
  * @returns {div} - Footer component as "footer"
  */
 export default class Footer extends Component {

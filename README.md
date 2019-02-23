@@ -1,19 +1,14 @@
-# adamzerella.com [![GitHub stars](https://img.shields.io/github/stars/adamzerella/adamzerella.svg)](https://github.com/adamzerella/adamzerella/stargazers) [![GitHub license](https://img.shields.io/github/license/adamzerella/adamzerella.svg)](https://github.com/adamzerella/adamzerella/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/adamzerella/adamzerella.svg)](https://github.com/adamzerella/adamzerella/issues)
-
+# adamzerella.com
 
 > Source code for the static website of [adamzerella.com](https://adamzerella.com)
 
-# Prerequisites
-
-This project requires for you to have [Node.js LTS](https://nodejs.org/en/) installed, which at the time of writing is `v10.13.0`.
-
-# Installation
+## Installation
 
 ```node
 npm i
 ```
 
-# Develop
+## Develop
 
 Will launch a local development server with hot reloading:
 
@@ -21,7 +16,7 @@ Will launch a local development server with hot reloading:
 npm run dev
 ```
 
-# Build
+## Build
 
 Generate the static bundle under `build/`
 
@@ -29,16 +24,15 @@ Generate the static bundle under `build/`
 npm run build
 ```
 
-# Deployment
+## Deployment
 
 ~~This project is automatically deployed to a [Bitnami Apache](https://docs.bitnami.com/virtual-machine/components/apache/) container hosted on [AWS Lightsail](https://aws.amazon.com/lightsail/). The automatic deployment (CI) is done with `CircleCi` watching the master branch.~~ This project automatically deploys to [Netlify](https://www.netlify.com/), watching the master branch.
 
-# License
 
-This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/adamzerella/adamzerella/master/LICENSE) file for details.
+## Contribute
 
-# Contributors
+Don't be scared raise an issue or a pull request! Any contributions, no matter how big or small will land your picture here.
 
 <div style="display:inline;">
-  <a href="https://github.com/adamzerella"><img width="64" height="64" src="https://avatars0.githubusercontent.com/u/1501560?s=460&v=4" alt="Adam A. Zerella"/></a>
+  <a href="https://github.com/adamzerella"><img width="64" height="64" src="https://avatars0.githubusercontent.com/u/1501560?s=460&v=4" alt="Adam Zerella"/></a>
 </div>

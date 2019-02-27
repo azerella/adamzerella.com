@@ -1,3 +1,8 @@
+## 0.4.9
+
+- Moved to GitHub pages.
+- Removed linting configs.
+
 ## 0.4.8
 
 - Removed `Dockerfile`

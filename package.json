@@ -1,6 +1,6 @@
 {
 	"name": "adamzerella",
-	"version": "0.4.8",
+	"version": "0.4.9",
 	"private": true,
 	"engines": {
 		"node": "~10",
@@ -34,7 +34,7 @@
 		"website",
 		"personal"
 	],
-	"author": "Adam Zerella <adam@commandshiftr.co>",
+	"author": "Adam Zerella <me@adamzerella.com> (https://adamzerella.com)",
 	"eslintConfig": {
 		"extends": "react-app"
 	},

@@ -1,0 +1,20 @@
+{
+	"short_name": "adamzerella",
+	"name": "Adam Zerella's personal website.",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "512x512 192x192 128x128 64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "static/media/face-rounded.png",
+			"sizes": "512x512 256x256 192x192",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#DEDE4D",
+	"background_color": "#212121"
+}

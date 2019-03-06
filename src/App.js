@@ -13,13 +13,13 @@ class App extends Component {
 		return (
 			<main>
 				<ParticleAnimation
-					numParticles={100}
+					numParticles={80}
 					background={{ r: 33, g: 33, b: 33, a: 1 }} // #212121
 					color={{ r: 222, g: 222, b: 77, a: 255 }} // #DEDE3D
 					particleSpeed={0.25}
 					interactive={false}
 					style={{
-						position: "absolute",
+						position: "fixed",
 						width: "100%",
 						height: "100%",
 						zIndex: "-1",

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import GitHubIcon from "./assets/images/github.svg";
 import LinkedInIcon from "./assets/images/linkedin.svg";
 import MailIcon from "./assets/images/mail.svg";
+import TwitterIcon from "./assets/images/twitter.svg";
 
 import "./Content.css";
 
@@ -53,7 +54,7 @@ export default class Content extends Component {
 					<div className="col-sm-4 offset-4">
 						<a
 							className="link-email"
-							href="mailto:adam.zerella@gmail.com"
+							href="mailto:hello@adamzerella.com"
 							target="_top"
 							title="Email Adam Zerella"
 						>
@@ -61,6 +62,22 @@ export default class Content extends Component {
 								className="img-thumbnail"
 								alt="email icon"
 								src={MailIcon}
+							/>
+						</a>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-sm-4 offset-4">
+						<a
+							className="link-twitter"
+							href="https://twitter.com/adamzerella"
+							target="_top"
+							title="Go to Adam Zerella's Twitter"
+						>
+							<img
+								className="img-thumbnail"
+								alt="twitter icon"
+								src={TwitterIcon}
 							/>
 						</a>
 					</div>

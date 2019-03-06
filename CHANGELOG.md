@@ -1,7 +1,13 @@
+## 0.4.10
+
+- Added Twitter icon
+
+
 ## 0.4.9
 
 - Moved to GitHub pages.
 - Removed linting configs.
+
 
 ## 0.4.8
 
@@ -12,11 +18,13 @@
 - Updated `README.md`
 - Ran `npm audit` to resolve vulnerabilities
 
+
 ## 0.4.7
 
 - Deprecated `.circleci` in favour of Netlify deployments
 - Removed HTML `twitter:` meta tags
 - Updated site desc
+
 
 ## 0.4.6
 
@@ -30,22 +38,25 @@
 - Upgraded favicon asset `face.svg`
 - Switched from Yarn back to NPM
 
+
 ## 0.4.5
 
 - Updated CRA to latest.
 - Installed and imported `react-app-polyfill`
+
 
 ## 0.4.3
 
 - Trialling polyfill `ellipse` for IE
 - Styled `<noscript>` page.
 
+
 ## 0.4.2
 
 - Changed email address to @gmail.com
 
-## 0.4.1
 
+## 0.4.1
 
 - Installed `react-particle-animation`
 - Implemented particle animiation as background
@@ -53,9 +64,11 @@
 - Minor CSS refactoring
 - Updated meta descriptions
 
+
 ## 0.3.1
 
 - Changed author name from `Adam A. ...` to `Adam ...`
+
 
 ## 0.3.0
 
@@ -65,12 +78,14 @@
 - Updated icons to git Github, Linkedin & Mail
 - Changed asset format from `.png` -> `.svg`
 
+
 ## 0.2.0
 
 - Migrated to create-react-app
 - Updated README
 - Bumping up to `v0.2.0`
 - Temporarily removed the `Header` component until complete.
+
 
 ## 0.1.1
 

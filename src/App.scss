@@ -1,7 +1,7 @@
-$az-primary: #eeeeee;
-$az-background: #393e47;
-$az-background--dark: #222831;
-$az-fg-primary: #00adb5;
+$az-primary: #FF7676;
+$az-background: #fff;
+$az-background--dark: #eee;
+$az-fg-primary: #C50A0A;
 
 body, html {
     margin: 0;
@@ -15,21 +15,12 @@ body, html {
     align-self: center;
     color: $az-primary;
     justify-content: center;
-    padding: 1rem;
-    background: linear-gradient(45deg, $az-background, $az-background--dark);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    // background: linear-gradient(45deg, #fff, #fff);
     height: 100%;
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.75rem;
-
-    .main {
-        justify-content: center;
-        flex: .5;
-    }
-
-    .footer {
-        justify-content: center;
-    }
 
     .nav {
         display: flex;
@@ -37,6 +28,7 @@ body, html {
         border-bottom: 0.15rem solid $az-fg-primary;
         align-self: flex-start;
         justify-content: center;
+        width: 100%;
 
         .nav__link {
             text-decoration: none;
@@ -47,13 +39,75 @@ body, html {
             margin: 0.75rem;
 
             &:hover{
-                color: $az-fg-primary;
-                border: 0.15rem solid $az-fg-primary;
+                color: #fff;
+                background-color: $az-primary;
+                border: 0.15rem solid $az-background--dark;
             }
+        }
+
+        .nav__signature{
+            margin-top: 12px;
         }
 
         .nav__link--fixed {
             margin-right: auto;
         }
     }
+
+    .main {
+        justify-content: center;
+        flex: .5;
+        
+        .container {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+
+        .header--lg {
+            font-size: 96px;
+        }
+
+        .header--md {
+            font-size: 56px;
+        }
+
+        .blockquote {
+            font-size: 36px;
+            font-weight: 500;
+            vertical-align: middle;
+            background-color: #efefef;
+            color: #000;
+            margin: 0;
+            padding: 1rem;
+            border-left: 0.75rem solid $az-primary;
+        }
+
+        .text {
+            color: #000;
+            text-align: left;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $az-primary;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-top: 0.5rem solid $az-fg-primary;
+
+    .footer__wrapper{
+        flex-direction: row;
+
+        .footer__link{
+            color: #fff;
+            padding: 0.5rem;
+        }
+    }
+    
 }

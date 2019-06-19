@@ -6,13 +6,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "watch": "npm run watch:css & npm run watch:html browser-sync start --server 'public' --files public",
+    "watch": "npm run watch:css & browser-sync start --server 'public' --files public",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "watch:html": "nodemon -e html -x \"npm run build:html\"",
     "build": "npm run copy:public & npm run build:css & npm run build:prefix",
     "build:css": "node-sass src/App.scss public/main.min.css --output-style compressed",
-    "build:html": "echo minifying html...\n",
-    "build:prefix": "postcss public/main.min.css --use autoprefixer -o docs/main.min.css --no-map",
+    "build:html": "echo minifying HTML...\n",
+    "build:prefix": "postcss public/main.min.css --use autoprefixer -o public/main.min.css --no-map",
     "copy:public": "ncp public/ docs/"
   },
   "repository": {
@@ -33,6 +33,7 @@
   "homepage": "https://github.com/adamzerella/adamzerella#readme",
   "dependencies": {
     "autoprefixer": "^9.6.0",
+    "html-minifier": "^4.0.0",
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2"
   },

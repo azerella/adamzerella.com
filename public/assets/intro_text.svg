@@ -1,0 +1,14 @@
+<svg viewbox="0 0 700 225">
+  
+  <clipPath id="textClip" class="filled-heading">
+    <text y="70">We are</text>
+    <text y="140">Creators</text>
+    <text y="210">+Innovators</text>
+  </clipPath>
+
+  
+  <g id="background" clip-path="url(#textClip)">
+    <path d="m449.78..." />
+    
+  </g>
+</svg>

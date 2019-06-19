@@ -6,8 +6,14 @@
     "doc": "docs"
   },
   "scripts": {
-    "watch": "node-sass -w src/App.scss docs/main.min.css --output-style compressed",
-    "build": "postcss docs/main.min.css --use autoprefixer -o docs/main.min.css --no-map"
+    "watch": "npm run watch:css & npm run watch:html browser-sync start --server 'public' --files public",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "watch:html": "nodemon -e html -x \"npm run build:html\"",
+    "build": "npm run copy:public & npm run build:css & npm run build:prefix",
+    "build:css": "node-sass src/App.scss public/main.min.css --output-style compressed",
+    "build:html": "echo minifying html...\n",
+    "build:prefix": "postcss public/main.min.css --use autoprefixer -o docs/main.min.css --no-map",
+    "copy:public": "ncp public/ docs/"
   },
   "repository": {
     "type": "git",
@@ -22,26 +28,28 @@
   "author": "Adam Zerella <hi@adamzerella.com> (https://adamzerella.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adamzerella/resign-deck/issues"
+    "url": "https://github.com/adamzerella/adamzerella/issues"
   },
-  "homepage": "https://github.com/adamzerella/resign-deck#readme",
+  "homepage": "https://github.com/adamzerella/adamzerella#readme",
   "dependencies": {
     "autoprefixer": "^9.6.0",
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2"
   },
-  "browserslist": [
-    "last 2 versions",
-    "> 1%",
-    "ie 10-11"
-  ],
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "husky": "^2.4.1"
+    "husky": "^2.4.1",
+    "ncp": "^2.0.0",
+    "nodemon": "^1.19.1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run build"
     }
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "ie 10-11"
+  ]
 }

@@ -3,9 +3,12 @@ $az-background: #fff;
 $az-background--dark: #eee;
 $az-fg-primary: #C50A0A;
 
+$az-break-small: 450px;
+$az-break-lg: 1200px;
+
 body, html {
-    margin: 0;
-    padding: 2rem;
+    margin: 1rem;
+    padding: 0rem;
     background-color: #fafafa;
 }
 
@@ -49,7 +52,7 @@ body, html {
         }
 
         .nav__signature{
-            margin-top: 12px;
+            margin-top: 1rem;
         }
 
         .nav__link--fixed {
@@ -67,15 +70,23 @@ body, html {
         }
 
         .header--lg {
-            font-size: 96px;
+            font-size: 5rem;
+
+            @media screen and( max-width: $az-break-small){
+                font-size: 3rem;
+            }
         }
 
         .header--md {
-            font-size: 56px;
+            font-size: 3rem;
+
+            @media screen and( max-width: $az-break-small){
+                font-size: 1.5rem;
+            }
         }
 
         .blockquote {
-            font-size: 36px;
+            font-size: 1.75rem;
             font-weight: 500;
             vertical-align: middle;
             background-color: #ffd6d6;
@@ -83,6 +94,10 @@ body, html {
             margin: 0;
             padding: 1rem;
             border-left: 0.75rem solid $az-primary;
+
+            @media screen and( max-width: $az-break-small){
+                font-size: 1.25rem;
+            }
         }
 
         .text {
@@ -92,24 +107,54 @@ body, html {
             padding: 1.5rem;
         }
     }
-}
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // background-color: $az-primary;
-    text-align: center;
-    color: $az-primary;
-    padding: 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    .footer__wrapper{
-        flex-direction: row;
-
-        .footer__link{
-            padding: 0.5rem;
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // background-color: $az-primary;
+        text-align: center;
+        color: $az-primary;
+        padding: 1rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+        
+        .footer__wrapper{
+            flex-direction: row;
+    
+            .footer__link{
+                padding: 0.5rem;
+            }
         }
     }
-    
+
+    .link {
+        text-decoration: none;
+        color: $az-primary;
+        padding: 1rem;
+
+        &:hover {
+            color: $az-fg-primary;
+            text-decoration: underline;
+        }
+        
+
+
+        .link--twitter {
+
+        }
+        
+        .link--mail {
+            
+        }
+
+        .link--github {
+            &:before {
+                content: " ";
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2….86 0 0 1 .83 2.22v3.29c0 .39.22.69.83.58A12 12 0 0 0 12 0z'/%3E%3C/svg%3E");
+            }
+        }
+        
+    }
 }
+

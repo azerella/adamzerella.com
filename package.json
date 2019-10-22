@@ -1,16 +1,16 @@
 {
 	"name": "adamzerella",
-	"version": "0.4.10",
+	"version": "0.4.11",
 	"private": true,
 	"engines": {
 		"node": "~10",
 		"npm": "~6"
 	},
 	"dependencies": {
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
 		"react-particle-animation": "^1.0.1",
-		"react-scripts": "^2.1.5"
+		"react-scripts": "^3.2.0"
 	},
 	"scripts": {
 		"dev": "npm run start",
@@ -20,7 +20,7 @@
 		"eject": "react-scripts eject"
 	},
 	"devDependencies": {
-		"prettier": "^1.16.4"
+		"prettier": "^1.18.2"
 	},
 	"repository": {
 		"type": "git",

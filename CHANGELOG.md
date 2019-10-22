@@ -1,3 +1,8 @@
+## 0.4.11
+
+- Bumped Node.js dependencies
+
+
 ## 0.4.10
 
 - Added Twitter icon

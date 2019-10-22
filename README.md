@@ -26,7 +26,7 @@ npm run build
 
 ## Deployment
 
-~~This project is automatically deployed to a [Bitnami Apache](https://docs.bitnami.com/virtual-machine/components/apache/) container hosted on [AWS Lightsail](https://aws.amazon.com/lightsail/). The automatic deployment (CI) is done with `CircleCi` watching the master branch.~~ This project automatically deploys to [Netlify](https://www.netlify.com/), watching the master branch.
+This project is automatically to GitHub pages, output is built to the `docs/` folder.
 
 
 ## Contribute

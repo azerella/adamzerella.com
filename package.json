@@ -7,6 +7,11 @@
 		"npm": "~6"
 	},
 	"dependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.9.0",
+		"@babel/plugin-transform-react-jsx": "^7.9.4",
+		"@babel/preset-env": "^7.9.0",
+		"@babel/preset-react": "^7.9.4",
 		"node-sass": "^4.13.1",
 		"preact": "^10.3.4",
 		"react": "^16.13.1",
@@ -16,7 +21,10 @@
 	},
 	"scripts": {
 		"watch": "",
-		"build": ""
+		"watch:ts": "tsc -w",
+		"build": "",
+		"build:ts": "tsc",
+		"build:js": "babel dist/ --out-dir docs/"
 	},
 	"repository": {
 		"type": "git",

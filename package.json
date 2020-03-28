@@ -1,26 +1,23 @@
 {
 	"name": "adamzerella",
-	"version": "0.4.11",
+	"version": "1.4.11",
 	"private": true,
 	"engines": {
-		"node": "~10",
+		"node": "~12",
 		"npm": "~6"
 	},
 	"dependencies": {
-		"react": "^16.10.2",
-		"react-dom": "^16.10.2",
+		"node-sass": "^4.13.1",
+		"parcel-bundler": "^1.12.4",
+		"preact": "^10.3.4",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
 		"react-particle-animation": "^1.0.1",
-		"react-scripts": "^3.2.0"
+		"typescript": "^3.8.3"
 	},
 	"scripts": {
-		"dev": "npm run start",
-		"start": "react-scripts start",
-		"build": "react-scripts build && cp src/assets/images/face-rounded.png build/static/media && mv build/* docs",
-		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
-	},
-	"devDependencies": {
-		"prettier": "^1.18.2"
+		"watch": "parcel src/index.html --out-dir dist/",
+		"build": "parcel build src/index.html --out-dir docs/ --no-source-maps"
 	},
 	"repository": {
 		"type": "git",
@@ -35,12 +32,6 @@
 		"personal"
 	],
 	"author": "Adam Zerella <me@adamzerella.com> (https://adamzerella.com)",
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": [
-		"last 2 versions",
-		"ie 11"
-	],
+	"browserslist": "> 0.25%, not dead",
 	"homepage": "https://adamzerella.com/"
 }

@@ -1,3 +1,8 @@
+## 1.4.11
+
+- Migrated to TypeScript and Preact.
+- Bumped packages.
+
 ## 0.4.11
 
 - Bumped Node.js dependencies

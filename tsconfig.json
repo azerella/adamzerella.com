@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "dist/",
+		"module": "commonjs",
+		"noImplicitAny": false,
+		"jsx": "react",
+		"jsxFactory": "h",
+		"target": "es5",
+		"removeComments": true
+	},
+	"include": ["src/**/*.tsx", "src/**/*.ts"]
+}

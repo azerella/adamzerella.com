@@ -19,7 +19,7 @@ module.exports = {
 		compress: true,
 		port: 9000,
 		hot: true,
-		contentBase: path.resolve(__dirname, 'dist'),
+		contentBase: path.resolve(__dirname, 'docs'),
 	},
 	optimization: {
 		minimize: isProd,
@@ -77,6 +77,6 @@ module.exports = {
 		filename: isProd
 			? '[name].[contenthash:5].min.js'
 			: '[name].[contenthash:5].js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'docs'),
 	},
 };

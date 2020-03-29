@@ -30,6 +30,7 @@
 	},
 	"scripts": {
 		"watch": "webpack-dev-server",
+		"build:prod": "NODE_ENV=production npm run build",
 		"build": "webpack"
 	},
 	"repository": {
@@ -46,5 +47,13 @@
 	],
 	"author": "Adam Zerella <me@adamzerella.com> (https://adamzerella.com)",
 	"browserslist": "> 0.25%, not dead",
-	"homepage": "https://adamzerella.com/"
+	"homepage": "https://adamzerella.com/",
+	"devDependencies": {
+		"husky": "^4.2.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run build:prod"
+		}
+	}
 }

@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -47,6 +48,12 @@ module.exports = {
 			clientsClaim: true,
 			skipWaiting: true,
 		}),
+		new CopyPlugin([
+			{
+				from: path.resolve(__dirname, 'src/public/js'),
+				to: path.resolve(__dirname, 'docs/public/js'),
+			},
+		]),
 	],
 	module: {
 		rules: [
@@ -74,9 +81,7 @@ module.exports = {
 		extensions: ['.tsx', '.ts', '.js'],
 	},
 	output: {
-		filename: isProd
-			? '[name].[hash:5].min.js'
-			: '[name].[hash:5].js',
+		filename: isProd ? '[name].[hash:5].min.js' : '[name].[hash:5].js',
 		path: path.resolve(__dirname, 'docs'),
 	},
 };

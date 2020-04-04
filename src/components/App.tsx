@@ -1,13 +1,19 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 
-import "./App.scss";
+import Avatar from './Avatar';
+import BioLinks from './BioLinks';
+import Footer from './Footer';
+
+import './App.scss';
 
 export interface Props {}
 
-interface State {}
-
-export default class App extends Component<Props, State> {
-	render() {
-		return <h1>Hello, World!</h1>;
-	}
+export default function App() {
+	return (
+		<div className="app">
+			<Avatar />
+			<BioLinks />
+			<Footer />
+		</div>
+	);
 }

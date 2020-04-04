@@ -75,8 +75,8 @@ module.exports = {
 	},
 	output: {
 		filename: isProd
-			? '[name].[contenthash:5].min.js'
-			: '[name].[contenthash:5].js',
+			? '[name].[hash:5].min.js'
+			: '[name].[hash:5].js',
 		path: path.resolve(__dirname, 'docs'),
 	},
 };

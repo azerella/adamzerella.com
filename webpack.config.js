@@ -18,10 +18,11 @@ module.exports = {
 	},
 	devtool: isProd ? 'none' : 'source-map',
 	devServer: {
-		compress: true,
+		compress: false,
 		port: 9000,
 		hot: true,
 		contentBase: path.resolve(__dirname, 'docs'),
+		clientLogLevel: 'silent',
 	},
 	optimization: {
 		minimize: isProd,

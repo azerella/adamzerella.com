@@ -20,7 +20,7 @@ module.exports = {
 	devServer: {
 		compress: false,
 		port: 9000,
-		hot: true,
+		hot: false,
 		contentBase: path.resolve(__dirname, 'docs'),
 		clientLogLevel: 'silent',
 	},
@@ -50,12 +50,10 @@ module.exports = {
 		// 	clientsClaim: true,
 		// 	skipWaiting: true,
 		// }),
-		// new CopyPlugin([
-		// 	{
-		// 		from: path.resolve(__dirname, 'src/assets/js'),
-		// 		to: path.resolve(__dirname, 'docs/assets/js'),
-		// 	},
-		// ]),
+		// new CopyPlugin({
+		// 	from: path.resolve(__dirname, 'src/assets/'),
+		// 	to: path.resolve(__dirname, 'docs/'),
+		// }),
 	],
 	module: {
 		rules: [
@@ -78,10 +76,7 @@ module.exports = {
 					},
 					'sass-loader',
 				],
-			},
-			{
-				test: /\.(png|svg|jpg|gif)$/,
-				use: ['file-loader'],
+				exclude: /node_modules/,
 			},
 		],
 	},

@@ -1,5 +1,6 @@
 const path = require('path');
 
+const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -36,7 +37,7 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src/index.html'),
-			favicon: path.resolve(__dirname, 'src/public/favicon.ico'),
+			favicon: path.resolve(__dirname, 'src/assets/favicon.ico'),
 		}),
 		new MiniCssExtractPlugin({
 			filename: isProd
@@ -44,16 +45,16 @@ module.exports = {
 				: '[name].[contenthash:5].css',
 			chunkFilename: '[id].[contenthash:5].css',
 		}),
-		new WorkboxPlugin.GenerateSW({
-			clientsClaim: true,
-			skipWaiting: true,
-		}),
-		new CopyPlugin([
-			{
-				from: path.resolve(__dirname, 'src/public/js'),
-				to: path.resolve(__dirname, 'docs/public/js'),
-			},
-		]),
+		// new WorkboxPlugin.GenerateSW({
+		// 	clientsClaim: true,
+		// 	skipWaiting: true,
+		// }),
+		// new CopyPlugin([
+		// 	{
+		// 		from: path.resolve(__dirname, 'src/assets/js'),
+		// 		to: path.resolve(__dirname, 'docs/assets/js'),
+		// 	},
+		// ]),
 	],
 	module: {
 		rules: [
@@ -68,6 +69,12 @@ module.exports = {
 					'style-loader',
 					MiniCssExtractPlugin.loader,
 					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: () => [autoprefixer()],
+						},
+					},
 					'sass-loader',
 				],
 			},

@@ -1,8 +1,16 @@
+@import '../colours';
+
+html {
+	min-height: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-}
-
-h1 {
-	color: red;
+	background-color: $primary-dark;
+	color: $primary-dark-text;
+	font-family: 'Sonsie One', cursive;
+	background: linear-gradient(153.92deg, #EE00F3 0%, #FC5EFF 46.35%, rgba(255, 107, 0, 0.71) 95.31%), #C4C4C4;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

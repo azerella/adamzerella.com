@@ -4,14 +4,13 @@
 		"sourceMap": true,
 		"outDir": "dist/",
 		"moduleResolution": "node",
-		"noImplicitAny": false,
+		"noImplicitAny": true,
 		"jsx": "react",
 		"jsxFactory": "h",
 		"strict": true,
 		"target": "es5",
 		"module": "commonjs",
-		"removeComments": true
 	},
 	"include": ["src/**/*.tsx", "src/**/*.ts"],
-	"exclude": ["node_modules", "dist"]
+	"exclude": ["node_modules"]
 }

@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
+import pkgJson = require('../../package.json');
+
 import './Footer.scss';
 
-export interface Props {}
-
 export default function Footer() {
-	return <footer className="footer"></footer>;
+	return <footer>{`v${pkgJson.version}`}    🍊</footer>
 }

@@ -7,7 +7,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -21,7 +20,7 @@ module.exports = {
 		compress: false,
 		port: 9000,
 		hot: false,
-		contentBase: path.resolve(__dirname, 'docs'),
+		contentBase: path.resolve(__dirname, 'build'),
 		clientLogLevel: 'silent',
 	},
 	optimization: {
@@ -49,10 +48,6 @@ module.exports = {
 		// new WorkboxPlugin.GenerateSW({
 		// 	clientsClaim: true,
 		// 	skipWaiting: true,
-		// }),
-		// new CopyPlugin({
-		// 	from: path.resolve(__dirname, 'src/assets/'),
-		// 	to: path.resolve(__dirname, 'docs/'),
 		// }),
 	],
 	module: {
@@ -85,6 +80,6 @@ module.exports = {
 	},
 	output: {
 		filename: isProd ? '[name].[hash:5].min.js' : '[name].[hash:5].js',
-		path: path.resolve(__dirname, 'docs'),
+		path: path.resolve(__dirname, 'build'),
 	},
 };

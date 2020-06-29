@@ -1,6 +1,6 @@
 {
 	"name": "adamzerella",
-	"version": "1.4.11",
+	"version": "2.4.11",
 	"private": true,
 	"engines": {
 		"node": "~12",
@@ -9,7 +9,6 @@
 	"dependencies": {
 		"autoprefixer": "^9.7.6",
 		"clean-webpack-plugin": "^3.0.0",
-		"copy-webpack-plugin": "^5.1.1",
 		"css-loader": "^3.4.2",
 		"html-webpack-plugin": "^4.0.3",
 		"mini-css-extract-plugin": "^0.9.0",
@@ -50,14 +49,6 @@
 	"browserslist": "> 0.25%, not dead",
 	"homepage": "https://adamzerella.com/",
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^2.30.0",
-		"@typescript-eslint/parser": "^2.30.0",
-		"eslint": "^6.8.0",
-		"eslint-config-airbnb": "^18.1.0",
-		"eslint-plugin-import": "^2.20.2",
-		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.19.0",
-		"eslint-plugin-react-hooks": "^2.5.1",
 		"serve": "^11.3.0",
 		"webpack-dev-server": "^3.10.3"
 	}

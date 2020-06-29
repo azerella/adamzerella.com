@@ -1,8 +1,7 @@
-import { h } from 'preact';
+import { h, Fragment } from 'preact';
 
+import Header from './Header';
 import Footer from './Footer';
-
-// import SunCircle from '../assets/img/circle.svg';
 
 import './App.scss';
 
@@ -10,10 +9,18 @@ export interface Props {}
 
 export default function App() {
 	return (
-		<div className="app">
-			<h1>Adam Zerella</h1>
-			{/* <SunCircle /> */}
+		<Fragment>
+			<Header 
+				text="Adam Zerella"
+				subHeading="Software engineer from Adelaide, Australia"
+			/>
+			<ul>
+				<li><a href="#" alt="todo">twitter</a></li>
+				<li><a href="#" alt="todo">github</a></li>
+				<li><a href="#" alt="todo">linkedin</a></li>
+				<li><a href="#" alt="todo">email</a></li>
+			</ul>
 			<Footer />
-		</div>
+		</Fragment>
 	);
 }

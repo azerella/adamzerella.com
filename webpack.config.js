@@ -45,7 +45,7 @@ module.exports = {
 				: '[name].[contenthash:5].css',
 			chunkFilename: '[id].[contenthash:5].css',
 		}),
-		// new WorkboxPlugin.GenerateSW({
+		// isProd && new WorkboxPlugin.GenerateSW({
 		// 	clientsClaim: true,
 		// 	skipWaiting: true,
 		// }),

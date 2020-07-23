@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
-import pkgJson = require('../../package.json');
-
 import './Footer.scss';
 
+declare const VERSION: string;
+
 export default function Footer() {
-	return <footer>{`v${pkgJson.version}`}    🍊</footer>
+	return <footer>{`v${VERSION}`}    🍊</footer>
 }

@@ -1,5 +1,6 @@
 const path = require('path');
 
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -32,6 +33,9 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
+		new webpack.DefinePlugin({
+			VERSION: JSON.stringify(require('./package.json').version)
+		}),
 		new TerserJSPlugin({
 			extractComments: false,
 		}),

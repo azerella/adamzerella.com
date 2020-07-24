@@ -28,21 +28,42 @@ module.exports = {
 		minimize: isProd,
 		splitChunks: {
 			chunks: 'all',
+			name: false,
 		},
-		minimizer: [new OptimizeCSSAssetsPlugin()],
+		minimizer: [new OptimizeCSSAssetsPlugin(), new TerserJSPlugin({
+			sourceMap: isProd,
+		})],
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
 		new webpack.DefinePlugin({
 			VERSION: JSON.stringify(require('./package.json').version)
 		}),
-		new TerserJSPlugin({
-			extractComments: false,
-		}),
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, 'src/index.html'),
-			favicon: path.resolve(__dirname, 'src/assets/favicon.ico'),
-		}),
+		new HtmlWebpackPlugin(
+			Object.assign(
+				{},
+				{
+					inject: true,
+					template: path.resolve(__dirname, 'src/index.html'),
+				},
+				isProd
+					? {
+						minify: {
+							removeComments: true,
+							collapseWhitespace: true,
+							removeRedundantAttributes: true,
+							useShortDoctype: true,
+							removeEmptyAttributes: true,
+							removeStyleLinkTypeAttributes: true,
+							keepClosingSlash: true,
+							minifyJS: true,
+							minifyCSS: true,
+							minifyURLs: true,
+						},
+					}
+					: undefined
+			)
+		),
 		new MiniCssExtractPlugin({
 			filename: isProd
 				? '[name].[contenthash:5].min.css'
@@ -83,7 +104,8 @@ module.exports = {
 		extensions: ['.tsx', '.ts', '.js'],
 	},
 	output: {
-		filename: isProd ? '[name].[hash:5].min.js' : '[name].[hash:5].js',
+		filename: isProd ? '[name].[hash:5].min.js' : '[name].js',
+		chunkFilename: isProd ? '[name].[contenthash:8].chunk.min.js' : '[name].chunk.js',
 		path: path.resolve(__dirname, 'build'),
 	},
 };

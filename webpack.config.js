@@ -20,11 +20,10 @@ module.exports = {
 	},
 	devtool: isProd ? 'none' : 'source-map',
 	devServer: {
-		compress: false,
-		port: 9000,
-		hot: false,
-		contentBase: path.resolve(__dirname, 'build'),
-		clientLogLevel: 'silent',
+		compress: true,
+		port: 4004,
+		hot: true,
+		clientLogLevel: 'info',
 	},
 	optimization: {
 		minimize: isProd,

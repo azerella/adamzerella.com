@@ -82,9 +82,11 @@ module.exports = {
 		),
 		new MiniCssExtractPlugin({
 			filename: isProd
-				? '[name].[contenthash:5].min.css'
-				: '[name].[contenthash:5].css',
-			chunkFilename: '[id].[contenthash:5].css',
+				? '[name].[contenthash:8].min.css'
+				: '[name].css',
+			chunkFilename: isProd 
+				? '[id].[contenthash:8].min.css' 
+				: '[name].chunk.css',
 		}),
 		// new WorkboxPlugin.GenerateSW({
 		// 	clientsClaim: true,
@@ -120,7 +122,7 @@ module.exports = {
 		extensions: ['.tsx', '.ts', '.js'],
 	},
 	output: {
-		filename: isProd ? '[name].[hash:5].min.js' : '[name].js',
+		filename: isProd ? '[name].[hash:8].min.js' : '[name].js',
 		chunkFilename: isProd ? '[name].[contenthash:8].chunk.min.js' : '[name].chunk.js',
 		path: path.resolve(__dirname, 'build'),
 	},

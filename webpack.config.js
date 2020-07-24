@@ -45,6 +45,7 @@ module.exports = {
 				{
 					inject: true,
 					template: path.resolve(__dirname, 'src/index.html'),
+					favicon: path.resolve(__dirname, 'src/assets/favicon.ico'),
 				},
 				isProd
 					? {

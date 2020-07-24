@@ -2,10 +2,12 @@ const path = require('path');
 
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const JSONMinify = require('node-json-minify');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
@@ -36,6 +38,19 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
+		new CopyPlugin({
+			patterns: [
+				{
+					from: path.join(__dirname, './src/assets/manifest.json'),
+					to: path.join(__dirname, './build/manifest.json'),
+					...isProd && {
+						transform(content) {
+							return JSONMinify(content.toString());
+						}
+					},
+				}
+			]
+		}),
 		new webpack.DefinePlugin({
 			VERSION: JSON.stringify(require('./package.json').version)
 		}),

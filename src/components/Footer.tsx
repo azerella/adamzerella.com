@@ -1,12 +1,9 @@
 import { h } from 'preact';
 
-import { version } from '../../package.json';
-
 import './Footer.scss';
 
+declare const VERSION: string;
+
 export default function Footer() {
-	return <footer>
-		Adelaide, Australia 🇦🇺<br /><br />
-		{`v${version}`}
-	</footer>
+	return <footer>{`v${VERSION}`}    🍊</footer>
 }

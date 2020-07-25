@@ -1,10 +1,13 @@
 const path = require('path');
 
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const JSONMinify = require('node-json-minify');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
@@ -17,33 +20,72 @@ module.exports = {
 	},
 	devtool: isProd ? 'none' : 'source-map',
 	devServer: {
-		compress: false,
-		port: 9000,
-		hot: false,
-		contentBase: path.resolve(__dirname, 'build'),
-		clientLogLevel: 'silent',
+		compress: true,
+		port: 4004,
+		hot: true,
+		clientLogLevel: 'info',
 	},
 	optimization: {
 		minimize: isProd,
 		splitChunks: {
 			chunks: 'all',
+			name: false,
 		},
-		minimizer: [new OptimizeCSSAssetsPlugin()],
+		minimizer: [new OptimizeCSSAssetsPlugin(), new TerserJSPlugin({
+			sourceMap: isProd,
+		})],
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-		new TerserJSPlugin({
-			extractComments: false,
+		new CopyPlugin({
+			patterns: [
+				{
+					from: path.join(__dirname, './src/assets/manifest.json'),
+					to: path.join(__dirname, './build/manifest.json'),
+					...isProd && {
+						transform(content) {
+							return JSONMinify(content.toString());
+						}
+					},
+				}
+			]
 		}),
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, 'src/index.html'),
-			favicon: path.resolve(__dirname, 'src/assets/favicon.ico'),
+		new webpack.DefinePlugin({
+			VERSION: JSON.stringify(require('./package.json').version)
 		}),
+		new HtmlWebpackPlugin(
+			Object.assign(
+				{},
+				{
+					inject: true,
+					template: path.resolve(__dirname, 'src/index.html'),
+					favicon: path.resolve(__dirname, 'src/assets/favicon.ico'),
+				},
+				isProd
+					? {
+						minify: {
+							removeComments: true,
+							collapseWhitespace: true,
+							removeRedundantAttributes: true,
+							useShortDoctype: true,
+							removeEmptyAttributes: true,
+							removeStyleLinkTypeAttributes: true,
+							keepClosingSlash: true,
+							minifyJS: true,
+							minifyCSS: true,
+							minifyURLs: true,
+						},
+					}
+					: undefined
+			)
+		),
 		new MiniCssExtractPlugin({
 			filename: isProd
-				? '[name].[contenthash:5].min.css'
-				: '[name].[contenthash:5].css',
-			chunkFilename: '[id].[contenthash:5].css',
+				? '[name].[contenthash:8].min.css'
+				: '[name].css',
+			chunkFilename: isProd 
+				? '[id].[contenthash:8].min.css' 
+				: '[name].chunk.css',
 		}),
 		// isProd && new WorkboxPlugin.GenerateSW({
 		// 	clientsClaim: true,
@@ -79,7 +121,8 @@ module.exports = {
 		extensions: ['.tsx', '.ts', '.js'],
 	},
 	output: {
-		filename: isProd ? '[name].[hash:5].min.js' : '[name].[hash:5].js',
+		filename: isProd ? '[name].[hash:8].min.js' : '[name].js',
+		chunkFilename: isProd ? '[name].[contenthash:8].chunk.min.js' : '[name].chunk.js',
 		path: path.resolve(__dirname, 'build'),
 	},
 };

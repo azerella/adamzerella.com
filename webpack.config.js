@@ -83,8 +83,8 @@ module.exports = {
 			filename: isProd
 				? '[name].[contenthash:8].min.css'
 				: '[name].css',
-			chunkFilename: isProd 
-				? '[id].[contenthash:8].min.css' 
+			chunkFilename: isProd
+				? '[id].[contenthash:8].min.css'
 				: '[name].chunk.css',
 		}),
 		// isProd && new WorkboxPlugin.GenerateSW({
@@ -103,7 +103,7 @@ module.exports = {
 				test: /\.s[ac]ss$/i,
 				use: [
 					'style-loader',
-					MiniCssExtractPlugin.loader,
+					...isProd ? [MiniCssExtractPlugin.loader] : [],
 					'css-loader',
 					{
 						loader: 'postcss-loader',

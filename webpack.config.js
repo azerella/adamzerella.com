@@ -8,7 +8,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const workboxPlugin = require('workbox-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -87,10 +87,10 @@ module.exports = {
 				? '[id].[contenthash:8].min.css'
 				: '[name].chunk.css',
 		}),
-		// isProd && new WorkboxPlugin.GenerateSW({
-		// 	clientsClaim: true,
-		// 	skipWaiting: true,
-		// }),
+		...(isProd
+			? [new workboxPlugin.GenerateSW({ clientsClaim: true, skipWaiting: true, })]
+			: []
+		)
 	],
 	module: {
 		rules: [

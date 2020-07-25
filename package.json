@@ -33,7 +33,9 @@
 		"watch": "webpack-dev-server",
 		"build:prod": "NODE_ENV=production npm run build",
 		"build": "webpack",
-		"serve": "serve docs/"
+		"serve": "serve docs/",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix"
 	},
 	"repository": {
 		"type": "git",
@@ -51,6 +53,11 @@
 	"browserslist": "> 0.25%, not dead",
 	"homepage": "https://adamzerella.com/",
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^3.7.0",
+		"@typescript-eslint/parser": "^3.7.0",
+		"eslint": "^7.5.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-plugin-import": "^2.22.0",
 		"serve": "^11.3.0",
 		"webpack-dev-server": "^3.10.3"
 	}

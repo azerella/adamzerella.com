@@ -5,5 +5,5 @@ import './Footer.scss';
 declare const VERSION: string;
 
 export default function Footer() {
-	return <footer>{`v${VERSION}`}    🍊</footer>
+	return <footer>{`v${VERSION}`}</footer>
 }

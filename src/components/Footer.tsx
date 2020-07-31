@@ -17,6 +17,6 @@ export default function Footer() {
 			<li><a rel="noopener noreferrer" href="mailto:hi@adamzerella.com"><IconEmail className="icon" /></a></li>
 			<li><a rel="noopener noreferrer" href="https://www.linkedin.com/in/adam-zerella-8803ab128/"><IconLinkedin className="icon" /></a></li>
 		</ul>
-		{`v${VERSION}`}
+		<span>{`v${VERSION}`}</span>
 	</footer>
 }

@@ -25,6 +25,9 @@ footer {
                 &:hover {
                     color: #313131;
                 }
+                &:focus {
+                    outline: solid 0.15rem #fff;
+                }
 
                 .icon {
                     width: 1.5rem;
